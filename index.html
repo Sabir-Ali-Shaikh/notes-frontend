@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./img/note.png" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>Notes</title>
+  </head>
+
+  <body>
+    <!-- top section Start -->
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div>
+          <img class="icon" src="./img/notes .png" alt="" />
+        </div>
+        <div class="d-flex justify-content-between">
+          <h2 class="">Write Notes</h2>
+          <button class="btn btn-toggle btn-success">New Note</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- top section End -->
+
+    <!-- New Note Start -->
+
+    <div class="container form hide">
+      <form name="form">
+        <div class="form-group">
+          <label for="title">Note Title</label>
+          <input
+            type="text"
+            class="form-control"
+            name="title"
+            placeholder="Enter Note Title"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="title">Description</label>
+          <textarea
+            class="form-control"
+            name="description"
+            rows="10"
+            placeholder="Enter Description For Your Note"
+            required
+          ></textarea>
+        </div>
+        <div class="buttons float-right">
+          <button class="btn Cancel btn-secondary">Cancel</button>
+          <button type="submit" class="btn subnote btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- New Note End -->
+
+    <!-- Modify Form Start -->
+
+    <div class="container hide Modformhide">
+      <form name="newform">
+        <div class="form-group">
+          <label for="title"> Add New Note Title</label>
+          <input
+            type="text"
+            class="form-control"
+            name="Newtitle"
+            placeholder="Enter New Note Title"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="title">Add New Description</label>
+          <textarea
+            class="form-control"
+            name="Newdescription"
+            rows="10"
+            placeholder="Change Description For Your Note"
+            required
+          ></textarea>
+        </div>
+        <div class="buttons float-right">
+          <button class="btn mod-Cancel btn-secondary">Cancel</button>
+          <button type="submit" class="btn subModify btn-primary">
+            Modify
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Modify Form End -->
+
+    <!-- Previous Notes Starts -->
+
+    <div class="container">
+      <h2>Previous notes</h2>
+      <div class="justify-content-between hide-small py-3">
+        <h3>Title</h3>
+        <h3 class="pr-5">Description</h3>
+        <h3 class="pr-5">Operation</h3>
+      </div>
+      <div class="prev-notes container"></div>
+    </div>
+
+    <!-- Previous Notes End -->
+    <script src="./script/script.js"></script>
+  </body>
+</html>
